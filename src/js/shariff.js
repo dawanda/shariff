@@ -331,21 +331,21 @@ Shariff.prototype = {
                 $(this).parent().width($(this).data('width'));
             }
 
-            if ($(this).data("useCustomContent")) {
+            if ($(this).data('useCustomContent')) {
                 var customContent = $(this).data('customContent');
                 var name = $(this).data('name');
                 $(this).replaceWith('<div></div>');
                 var $iframeContainer = $(this);
 
-                $("<iframe name='"+ name +"'></iframe>").load(function(){
-                    $("iframe [name='"+ name +"]").contents().find('body').html(customContent);
+                $('<iframe name=\''+ name +'\'></iframe>').load(function(){
+                    $('iframe [name=\''+ name +'\']').contents().find('body').html(customContent);
                 }).appendTo($iframeContainer);
 
 
                 //$(this).contents().find('body').html(customContent);
             } else {
                 $(this).replaceWith(
-                    '<iframe src="' + url + '"></iframe>'
+                    '<iframe src=\'' + url + '\'></iframe>'
                 );
             }
 

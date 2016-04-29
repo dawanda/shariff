@@ -39,14 +39,14 @@ module.exports = function(shariff) {
             'zh': '在Facebook上分享',
         },
         shareUrl: 'http://www.facebook.com/v2.4/plugins/like.php?href=' + fbEncUrl + shariff.getReferrerTrack() + '&width&layout=standard&action=like&show_faces=true&share=false&height=80',
-        customContent: "<div id='fb-root'></div>" +
-        "<script>(function(d, s, id) {" +
-            "var js, fjs = d.getElementsByTagName(s)[0];" +
-            "if (d.getElementById(id)) return;" +
-            "js = d.createElement(s); js.id = id;" +
-            "js.src = '//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4';"+
-            "fjs.parentNode.insertBefore(js, fjs);"+
-        "}(document, 'script', 'facebook-jssdk'));</script>" +
-        "<div class='fb-like' data-href='" + fbEncUrl + shariff.getReferrerTrack() +"' data-layout='standard' data-action='like' data-show-faces='false' data-share='false'></div>"
+        customContent: '<div id=\'fb-root\'></div>' +
+        '<script>(function(d, s, id) {' +
+            'var js, fjs = d.getElementsByTagName(s)[0];' +
+            'if (d.getElementById(id)) return;' +
+            'js = d.createElement(s); js.id = id;' +
+            'js.src = \'//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4\';'+
+            'fjs.parentNode.insertBefore(js, fjs);'+
+        '}(document, \'script\', \'facebook-jssdk\'));</script>' +
+        '<div class=\'fb-like\' data-href=\''+ fbEncUrl + shariff.getReferrerTrack() +'\' data-layout=\'standard\' data-action=\'like\' data-show-faces=\'false\' data-share=\'false\'></div>'
     };
 };
